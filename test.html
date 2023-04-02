@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes typed {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 100%;
+            }
+
+            100% {
+                width: 0;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                background-color: transparent;
+            }
+        }
+
+        .typed-text {
+            animation: typed 4s linear;
+            animation-fill-mode: forwards;
+            white-space: nowrap;
+            overflow: hidden;
+            position: relative;
+            max-width: 100%;
+        }
+
+        .typed-text:after {
+            content: "|";
+            animation: blink 0.5s linear infinite;
+            position: absolute;
+            right: 0;
+            background-color: black;
+            transition: background-color 0.1s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 270px;">
+        <div class="typed-text">
+            This text will appear as if it was typed.
+        </div>
+    </div>
+</body>
+
+</html>

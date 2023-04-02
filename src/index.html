@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <link href="./dist/output.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+            html {
+                font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            }
+        </style>
+        <script>
+            function toggleAnimation() {
+                var slide = document.querySelector(".second");
+                slide.classList.remove("reverse");
+                slide.classList.add("animated");
+            }
+            function reverseAnimation() {
+                var slide = document.querySelector(".second");
+                slide.classList.remove("animated");
+                slide.classList.add("reverse");
+            }
+            var prompt = ["Simon.", "un développeur.", "un passioné.", "votre futur collaborateur."]
+            var state = [toggleAnimation, reverseAnimation]
+            var i = 0;
+            var j = 0;
+            var isAnimated = false;
+            setInterval(function() {
+                if (!isAnimated) {
+                    isAnimated = true;
+                    document.getElementById("text").innerHTML = prompt[i];
+                    if (j == 0) {
+                        state[j]();
+                        setTimeout(function() {
+                            isAnimated = false;
+                        }, 2000);
+                    } else {
+                        setTimeout(function() {
+                            isAnimated = false;
+                        }, 1000);
+                        state[j]();
+                    }
+                    j++;
+                    if (j == state.length) {
+                        j = 0;
+                        i++;
+                        if (i == prompt.length) {
+                            i = 0;
+                        }
+                    }
+                }
+            }, 1000);
+        </script>
+    </head>
+    <body class="bg-[#161925]">
+        <div>
+            <div class="flex flex-col items-end fixed right-[5%] bottom-[10%] text-purple-400">
+                <a class="hover:text-white" href="#home">Acceuil</a>
+                <a class="hover:text-white" href="#profil">A propos</a>
+                <a class="hover:text-white" href="#portfolio">Mes projets</a>
+                <a class="hover:text-white" href="#timeline">Prendre contact</a>
+            </div>
+            <div class="flex flex-col items-left fixed right-[5%] top-[10%] text-purple-400">
+                <a class="mt-3 hover:scale-150 transform transition duration-300 ease-in-out">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#c084fc" d="M12 0c-6.626 0-12 5.373-12 12 0 
+                        5.302 3.438 9.8 8.207 
+                        11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 
+                        1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 
+                        3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 
+                        0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 
+                        3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 
+                        3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 
+                        4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 
+                        .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/simon-bandiera-93451b232/" 
+                    class="mt-6 hover:scale-150 transform transition duration-300 
+                    ease-in-out" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#c084fc" d="M12 2c5.514 0 10 4.486 10 10s-4.486 
+                        10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 
+                        12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 
+                        1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 
+                        1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 
+                        0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z"/>
+                    </svg>
+                </a>
+                <a class="mt-6 hover:scale-150 transform transition duration-300 ease-in-out">
+                    <svg width="24" height="24" fill-rule="evenodd" clip-rule="evenodd">
+                        <path fill="#c084fc" d="M24 21h-24v-18h24v18zm-23-16.477v15.477h22v-15.477l-10.999 
+                        10-11.001-10zm21.089-.523h-20.176l10.088 9.171 10.088-9.171z"/>
+                    </svg>
+                </a>
+                <a class="mt-6 hover:scale-150 transform transition duration-300 ease-in-out">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="#c084fc" d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 
+                        1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 
+                        1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div id="home" class="homeppo">
+            <div class="flex flex-col h-screen text-white container mx-auto pt-80">
+                <div class="typewriter mr-auto container">
+                    <div class="text-6xl animation">
+                        <span class="font-medium first">
+                            Enchanté, je suis
+                        </span> 
+                        <span class="slide">
+                            <span id="text" class="second text-purple-400 font-bold">
+                                Simon
+                            </span>
+                        </span>
+                    </div>
+                    <h2 class="text-5xl opacity-75 pt-4">
+                        Etudiant en informatique.
+                    </h2>
+                </div>
+                <p class="pt-4 text-lg opacity-50 max-w-2xl"> 
+                    Passioné d'informatique, j'aime apprendre et découvrir de nouvelles choses.
+                    Je porte un intéret particulier pour le full-stack, l'intelligence artificielle ainsi que
+                    le design.
+                </p>
+                <button class="border-2 rounded-lg mr-auto border-purple-400 
+                            text-purple-400 font-bold mt-14 mb-40 px-5 py-2.5
+                            hover:scale-105 transform transition duration-300 
+                            ease-in-out hover:bg-[#1b2a40]">
+                            Me contacter
+                </button>
+            </div>
+        </div>
+
+        <div id="profil" class="pt-4 container mx-auto">
+            <div class="title absolute">
+                <h2 class="text-white text-5xl opacity-75">A propos</h2>
+            </div>
+            <div class="flex flex-row pt-28">
+                <p class="text-lg opacity-50 max-w-sm text-white text-justify pr-4"> 
+                    Bonjour ! Je m'appelle Simon et je suis un étudiant en première
+                    année en informatique à <a class="text-purple-400 ">Epitech Lille</a>. 
+                    J'ai 18 ans et je cherche sans cesse à résoudre de nouveaux challenges.
+                    L'informatique est un monde en évolution constante et je suis toujours 
+                    à la découverte de nouvelle technologies.
+                </p>
+                <div class="flex flex-col">
+                    <p class="text-lg opacity-50 max-w-sm text-white text-justify pl-4">
+                        En dehors de l'informatique j'aime sortir avec mes amis, jouer au jeux
+                        vidéo, la mécanique et depuis peu je m'essaye au piano !
+                    </p>
+                </div>
+                <img class="rounded-2xl h-72 w-72 ml-14" src="./img/simon_giga_beau.jpg" alt="">
+            </div>
+            <!-- <p class="text-lg opacity-50 max-w-3xl text-white text-justify">
+                De plus, je suis actuellement à la recherche d'un 
+                <a class="text-purple-400">stage de 4 à 6 mois</a>
+                entre le 4 juillet et le 31 décembre 2022. Je suis à votre disposition
+                si vous êtes intéressé.
+            </p> -->
+        </div>
+
+        <div id="portfolio" class="mt-28 h-screen pt-4 container mx-auto">
+            <div class="title absolute">
+                <h2 class="text-white text-5xl opacity-75">Mes projets</h2>
+            </div>
+            <div class="pt-28">
+                <p class="text-white text-lg opacity-50">
+                    Voici quelques projets sur lesquels j'ai travaillé :
+                </p>
+                <div class="pt-10 flex flex-row gap-8">
+                    <div>
+                        <a href="https://www.sortify.fr" target="_blank"
+                        class="hover:scale-105 transform transition duration-300 ease-in-out">
+                            <img src="./img/sortify.png" class="rounded-2xl shadow-lg" width="700" height="800">
+                        </a>
+                        <div class="flex flex-col">
+                            <div class="mt-5">
+                                <h3 class="text-purple-400 text-2xl pb-4 font-bold">Sortiy</h3>
+                                <p class="max-w-xl text-white opacity-50 text-lg">
+                                    Un site web permetant de, en se connectant à son compte spotify,
+                                    trié les sons par genres d'une certaines playlist.
+                                </p>
+                            </div>
+                            <div class="max-w-xl text-white flex flex-grid gap-4 mt-auto justify-between">
+                                <a class="hover:scale-125 transform transition duration-300 ease-in-out"
+                                    href="https://www.sortify.fr" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <div class="opacity-25">
+                                    <a>Python</a>
+                                    <a>Flask</a>
+                                    <a>Jquery</a>
+                                    <a>Tailwind Css</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="https://www.sortify.fr" target="_blank"
+                        class="hover:scale-105 transform transition duration-300 ease-in-out">
+                            <img src="./img/sortify.png" class="rounded-2xl shadow-lg" width="700" height="800">
+                        </a>
+                        <div class="flex flex-col">
+                            <div class="mt-5">
+                                <h3 class="text-purple-400 text-2xl pb-4 font-bold ">Sortiy</h3>
+                                <p class="max-w-xl text-white opacity-50 text-lg">
+                                    Un site web permetant de, en se connectant à son compte spotify,
+                                    trié les sons par genres d'une certaines playlist.
+                                </p>
+                            </div>
+                            <div class="max-w-xl text-white flex flex-grid gap-4 mt-auto justify-between">
+                                <a class="hover:scale-125 transform transition duration-300 ease-in-out"
+                                    href="https://www.sortify.fr" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg>
+                                </a>
+                                <div class="opacity-25">
+                                    <a>Python</a>
+                                    <a>Flask</a>
+                                    <a>Jquery</a>
+                                    <a>Tailwind Css</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
