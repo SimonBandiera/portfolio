@@ -57,7 +57,7 @@
             }, 1000);
         </script>
     </head>
-    <body class="overflow-x-hidden bg-[#161925] m-6 lg:m-0">
+    <body class="overflow-x-hidden bg-[#161925] m-6 px-4">
         <div class="hidden xl:block">
             <div class="flex flex-col items-end fixed right-[5%] bottom-[10%] text-purple-400">
                 <a class="hover:text-white" href="#home">Acceuil</a>
@@ -143,11 +143,11 @@
             <div class="title absolute">
                 <h2 class="text-white text-5xl">A propos</h2>
             </div>
-            <div class="xl:flex xl:flex-row pt-28 xl:gap-20 xl:mx-40">
+            <div class="xl:flex xl:flex-row pt-28 xl:gap-20 xl:mr-40">
                 <div class="flex justify-center">
                     <img class="block xl:hidden rounded-xl" src="./img/test_portfolio.jpg" width="400">
                 </div>
-                <div class="my-auto xl:max-w-lg">
+                <div class="my-auto">
                     <p class="text-lg text-white text-justify pt-10 xl:pt-0"> 
                         Bonjour ! Je m'appelle Simon et je suis un étudiant à 
                         <a class="text-purple-400 ">Epitech Lille</a>. 
@@ -159,18 +159,26 @@
                         Avec mes compétences, je peux vous aider à donner
                         naissance à vos idées !
                     </p>
+                    <p class="text-lg text-white text-justify pt-10">
+                        Je suis actuellement à la recherche d'un 
+                        <a class="text-purple-400 ">part-time</a> 
+                        (stage, cdd, freelance) de septembre à janvier 
+                        ainsi que d'un
+                        <a class="text-purple-400 ">stage</a>
+                          de 4 mois de février à juin 2024.
+                    </p>
                 </div>
                 <img class="rounded-xl hidden xl:block" src="./img/test_portfolio.jpg" width="400">
             </div>
         </div>
 
-        <div id="portfolio" class="lg:h-screen pt-20 lg:pt-4 container mx-auto flex">
+        <div id="portfolio" class="lg:h-screen pt-20 container mx-auto flex">
             <div class="title absolute">
                 <h2 class="text-white text-5xl">Mes projets</h2>
             </div>
             <div class="lg:pt-28">
-                <div class="pt-10 flex lg:flex-row flex-col lg:gap-20">
-                    <div class="border-t-emerald-50 border-2 p-8 lg:-mb-20 mt-10 lg:mt-20">
+                <div class="pt-10 flex lg:flex-row flex-col lg:gap-20 pr-10">
+                    <div class="border-t-emerald-50 border-2 p-8 mt-10">
                         <a href="https://www.sortify.fr" target="_blank"
                         class="hover:scale-105 transform transition duration-300 ease-in-out flex justify-center">
                         <div class="pic-ctn h-60 xl:h-80">
@@ -251,7 +259,7 @@
             <div class="w-full flex flex-col lg:flex-row lg:justify-center lg:gap-20">
                 <div class="xl:hidden flex text-white opacity-75 gap-4 justify-center pb-4">
                     <a href="https://www.linkedin.com/in/simon-bandiera-93451b232/"
-                    class="hover:scale-110 transform transition duration-300 ease-in-out flex gap-2"
+                    class="hover:scale-110 transform transition duration-300 ease-in-out flex gap-2 pr-4"
                     target="_blank">
                         <svg width="24" height="24" viewBox="0 0 24 24">
                             <path fill="#c084fc" d="M12 0c-6.626 0-12 5.373-12 12 0 
@@ -269,7 +277,7 @@
                     </a>
                     <a href="https://github.com/SimonBandiera" 
                         class="hover:scale-110 transform transition duration-300 gap-2 
-                        ease-in-out flex" target="_blank">
+                        ease-in-out flex pl-4" target="_blank">
                         <svg width="24" height="24" viewBox="0 0 24 24">
                             <path fill="#c084fc" d="M12 2c5.514 0 10 4.486 10 10s-4.486 
                             10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 
