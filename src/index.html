@@ -57,7 +57,7 @@
             }, 1000);
         </script>
     </head>
-    <body class="overflow-x-hidden bg-[#161925] m-6 px-4">
+    <body class="overflow-x-hidden bg-[#161925] mx-4 md:mx-20 flex flex-col gap-10">
         <div class="hidden xl:block">
             <div class="flex flex-col items-end fixed right-[5%] bottom-[10%] text-purple-400">
                 <a class="hover:text-white" href="#home">Acceuil</a>
@@ -108,8 +108,8 @@
                 </a>
             </div>
         </div>
-        <div id="home" class="homeppo">
-            <div class="flex flex-col h-screen text-white container mx-auto pt-40 lg:pt-80">
+        <div id="home" class="homeppo 2xl:pl-[15%]">
+            <div class="flex flex-col h-screen w-full text-white container mt-40 md:mt-80">
                 <div class="typewriter mr-auto container">
                     <div class="text-6xl animation">
                         <span class="font-medium first">
@@ -139,102 +139,158 @@
             </div>
         </div>
 
-        <div id="profil" class="pt-4 container mx-auto xl:h-screen">
-            <div class="title absolute">
+        <div id="profil" class="container min-h-screen flex flex-col gap-10 2xl:pl-[15%]">
+            <div class="title">
                 <h2 class="text-white text-5xl">A propos</h2>
             </div>
-            <div class="xl:flex xl:flex-row pt-28 xl:gap-20 xl:mr-40">
-                <div class="flex justify-center">
-                    <img class="block xl:hidden rounded-xl" src="./img/test_portfolio.jpg" width="400">
+            <div class="my-auto">
+                <div class="flex flex-col gap-10 xl:flex-row xl:mr-40">
+                    <div class="flex justify-center">
+                        <img class="block xl:hidden rounded-xl" src="./img/test_portfolio.jpg" width="400">
+                    </div>
+                    <div class="flex flex-col gap-5 my-auto text-lg text-white ">
+                        <p class="text-justify"> 
+                            Bonjour ! Je m'appelle Simon et je suis un étudiant à 
+                            <a class="text-purple-400 ">Epitech Lille</a>. 
+                            J'ai développé une passion pour trouver et résoudre de nouveaux challenges.
+                            L'informatique est un monde en évolution constante et je suis toujours 
+                            à la découverte de nouvelle technologies.
+                        </p>
+                        <p class="text-justify">
+                            Avec mes compétences, je peux vous aider à donner
+                            naissance à vos idées !
+                        </p>
+                        <p class="text-justify">
+                            Je suis actuellement à la recherche d'un 
+                            <a class="text-purple-400 ">part-time</a> 
+                            (stage, cdd, freelance) de septembre à janvier 
+                            ainsi que d'un
+                            <a class="text-purple-400 ">stage</a>
+                              de 4 mois de février à juin 2024.
+                        </p>
+                        <p class="text-justify">Voici quelque une des technologies que j'ai utilisé dans mes projets récemment:</p>
+                        <div class="flex gap-20">
+                            <ul class="list-disc pl-5">
+                                <li>React</li>
+                                <li>Python</li>
+                                <li>Fast API</li>
+                            </ul>
+                            <ul class="list-disc pl-5">
+                                <li>Tailwind CSS</li>
+                                <li>Typescript</li>
+                                <li>C / C++</li>
+                            </ul>
+                        </div>
+    
+                    </div>
+                    <img class="rounded-xl hidden xl:block" src="./img/test_portfolio.jpg" width="400">
                 </div>
-                <div class="my-auto">
-                    <p class="text-lg text-white text-justify pt-10 xl:pt-0"> 
-                        Bonjour ! Je m'appelle Simon et je suis un étudiant à 
-                        <a class="text-purple-400 ">Epitech Lille</a>. 
-                        J'ai développé une passion pour trouver et résoudre de nouveaux challenges.
-                        L'informatique est un monde en évolution constante et je suis toujours 
-                        à la découverte de nouvelle technologies.
-                    </p>
-                    <p class="text-lg text-white text-justify pt-10">
-                        Avec mes compétences, je peux vous aider à donner
-                        naissance à vos idées !
-                    </p>
-                    <p class="text-lg text-white text-justify pt-10">
-                        Je suis actuellement à la recherche d'un 
-                        <a class="text-purple-400 ">part-time</a> 
-                        (stage, cdd, freelance) de septembre à janvier 
-                        ainsi que d'un
-                        <a class="text-purple-400 ">stage</a>
-                          de 4 mois de février à juin 2024.
-                    </p>
-                </div>
-                <img class="rounded-xl hidden xl:block" src="./img/test_portfolio.jpg" width="400">
             </div>
         </div>
-
-        <div id="portfolio" class="lg:h-screen pt-20 container mx-auto flex">
-            <div class="title absolute">
+        <div id="portfolio" class="h-screen container xl:pr-40 flex flex-col min-h-screen mt-20 md:pt-0">
+            <div class="title 2xl:pl-[15%]">
                 <h2 class="text-white text-5xl">Mes projets</h2>
             </div>
-            <div class="lg:pt-28">
-                <div class="pt-10 flex lg:flex-row flex-col lg:gap-20 pr-10">
-                    <div class="border-t-emerald-50 border-2 p-8 mt-10">
-                        <a href="https://www.sortify.fr" target="_blank"
-                        class="hover:scale-105 transform transition duration-300 ease-in-out flex justify-center">
-                        <div class="pic-ctn h-60 xl:h-80">
-                            <img src="./img/home.png" alt="" class="pic">
-                            <img src="./img/track.png" alt="" class="pic">
-                            <img src="./img/plotting.png" alt="" class="pic">
-                            <img src="./img/laodind_flexxtrack.png" alt="" class="pic">
-                            <img src="./img/alarm_visu.png" alt="" class="pic">
-                        </div>
-                        </a>
-                        <div class="flex flex-col mt-4">
-                            <div class="mt-5">
-                                <h3 class="text-purple-400 text-2xl pb-4 font-bold">ALSTOM - Flexxtrack</h3>
-                                <p class="max-w-xl text-white text-lg">
-                                    Réalisation d'une mise a jour sur un outil
-                                    de gestion de maintenance des voies.
+            <div class="my-auto">
+                <div class="flex flex-col gap-4 lg:hidden">
+                    <div class="mt-10">
+                        <div class="rounded-2xl text-white bg-[#6B4F91]" style="background-image: url('./img/track.png');
+                                                                                            background-repeat: no-repeat;
+                                                                                            background-position: center;
+                                                                                            ">
+                            <div class="z-50 w-full px-10 py-10 rounded-xl" style="  background-color: rgb(0,0,0);
+                            background-color: rgba(0,0,0, 0.4);">
+                                <p class="text-3xl font-semibol">Flexxtrack</p>
+                                <p class="pt-10"> Réalisation d'une mise a jour sur un outil
+                                    de gestion de maintenance des voies durant 
+                                    mon stage de première année</p>
+                                <p class="pt-10">
+                                    Big Data - Mecatronic - Python - Javascript - Matlab
                                 </p>
-                            </div>
-                            <div class="pt-4 max-w-xl text-white flex flex-grid gap-4 mt-auto opacity-75">
-                                <a class="border-2 border-white p-2">Big Data</a>
-                                <a class="border-2 border-white p-2">Mecatronic</a>
-                                <a class="border-2 border-white p-2">Matlab</a>
-                                <a class="border-2 border-white p-2">JS / Flask</a>
+                                <div class="mt-10">
+                                    <a href="https://www.alstom.com/fr/groupe" target="_blank" class="hover:scale-105 transform transition duration-300 ease-in-out">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="border-t-emerald-50 border-2 mt-10 p-8">
-                        <a href="https://www.sortify.fr" target="_blank"
-                        class="hover:scale-105 transform transition duration-300 ease-in-out flex justify-center">
-                            <div class="pic-ctn h-60 xl:h-80">
-                                <img src="./img/sortify.png" alt="" class="pic">
-                                <img src="./img/dashboard.png" alt="" class="pic">
-                                <img src="./img/loading.png" alt="" class="pic">
-                                <img src="./img/laststep.png" alt="" class="pic">
-                                <img src="./img/done.png" alt="" class="pic">
-                            </div>
-                        </a>
-                        <div class="flex flex-col">
-                            <div class="mt-5">
-                                <h3 class="text-purple-400 text-2xl pb-4 font-bold ">Sortify</h3>
-                                <p class="max-w-xl text-white  text-lg">
-                                    Un site web permetant de, en se connectant à son compte spotify,
-                                    trié les sons par genres d'une certaines playlist.
+                    <div class="mt-10">
+                        <div class="rounded-2xl text-white bg-[#6B4F91]" style="background-image: url('./img/dashboard.png');
+                                                                                    background-repeat: no-repeat;
+                                                                                    background-position: center;
+                                                                                    ">
+                            <div class="z-50 w-full px-10 py-10 rounded-xl" style="  background-color: rgb(0,0,0);
+                                background-color: rgba(0,0,0, 0.4);">
+                                <p class="text-3xl font-semibol">Sortify</p>
+                                <p class="pt-10"> Un site web permetant de, en se connectant à son compte spotify,
+                                    trié les sons par genres d'une certaines playlist.</p>
+                                <p class="pt-10">
+                                    Python - Flask - Jquery - Tailwind CSS - API Spotify
                                 </p>
-                            </div>
-                            <div class="max-w-xl text-white flex flex-grid gap-4 mt-auto justify-between">
-                                <div class="pt-4 max-w-xl text-white flex flex-grid gap-4 mt-auto opacity-75">
-                                    <a class="border-2 border-white p-2">Python</a>
-                                    <a class="border-2 border-white p-2">Flask</a>
-                                    <a class="border-2 border-white p-2">Jquery</a>
-                                    <a class="border-2 border-white p-2">Tailwind Css</a>
+                                <div class="flex gap-5 mt-10">
+                                    <div class="hover:scale-105 transform transition duration-300 ease-in-ou">
+                                        <a href="https://www.sortify.fr" target="_blank" class="hover:scale-105 transform transition duration-300 ease-in-out">
+                                            <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                                <polyline points="15 3 21 3 21 9"></polyline>
+                                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href="https://github.com/SimonBandiera/Sortify" target="_blank"
+                                        class="hover:scale-105 transform transition duration-300 ease-in-out">
+                                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="#ffffff" d="M12 0c-6.626 0-12 5.373-12 12 0 
+                                                5.302 3.438 9.8 8.207 
+                                                11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 
+                                                1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 
+                                                3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 
+                                                0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 
+                                                3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 
+                                                3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 
+                                                4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 
+                                                .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
-                                <a class="pt-6 hover:scale-125 transform transition duration-300 ease-in-out"
-                                    href="https://www.sortify.fr" target="_blank">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hidden lg:flex flex-col gap-20 2xl:pl-[15%]">
+                    <div class="flex w-full pt-10 h-96 pl-0">
+                        <div class="w-full bg-[#6B4F91] rounded-2xl">
+                            <a href="https://www.alstom.com/fr/groupe" class="" target="_blank">
+                                <img src="./img/track.png" class="min-w-full min-h-full rounded-xl">
+                            </a>
+                        </div>
+                        <div class="w-full text-white py-6">
+                            <h1 class="w-full text-right text-3xl font-semibold">Flexxtrack</h1>
+                            <div class="bg-[#2c324b] mt-10 -ml-20 mr-20 text-right rounded-md">
+                                <p class="p-5"> Réalisation d'une mise a jour sur un outil
+                                    de gestion de maintenance des voies durant 
+                                    mon stage de première année</p>
+                            </div>
+                            <p class="pt-16 text-right">
+                                Big Data - Mecatronic - Python - Javascript - Matlab
+                            </p>
+                            <div class="mt-8 flex justify-end">
+                                <a href="https://www.alstom.com/fr/groupe" target="_blank" class="hover:scale-105 transform transition duration-300 ease-in-out">
                                     <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2"
+                                        viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round">
                                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                         <polyline points="15 3 21 3 21 9"></polyline>
@@ -244,22 +300,71 @@
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="flex w-full pt-10 h-96">
+                        <div class="w-full text-white py-6 z-10">
+                            <h1 class="w-full text-left text-3xl font-semibold">Sortify</h1>
+                            <div class="bg-[#2c324b] mt-10 ml-20 -mr-20 text-left rounded-md">
+                                <p class="p-5"> Un site web permetant de, en se connectant à son compte spotify,
+                                    trié les sons par genres d'une certaines playlist.</p>
+                                </div>
+                            <p class="pt-16 text-left">
+                                Python - Flask - Jquery - Tailwind CSS - API Spotify
+                            </p>
+                            <div class="flex gap-5 mt-10">
+                                <div class="hover:scale-105 transform transition duration-300 ease-in-ou">
+                                    <a href="https://www.sortify.fr" target="_blank" class="hover:scale-105 transform transition duration-300 ease-in-out">
+                                        <svg xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                            <polyline points="15 3 21 3 21 9"></polyline>
+                                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://github.com/SimonBandiera/Sortify" target="_blank"
+                                    class="hover:scale-105 transform transition duration-300 ease-in-out">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <path fill="#ffffff" d="M12 0c-6.626 0-12 5.373-12 12 0 
+                                            5.302 3.438 9.8 8.207 
+                                            11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 
+                                            1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 
+                                            3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 
+                                            0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 
+                                            3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 
+                                            3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 
+                                            4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 
+                                            .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full bg-[#6B4F91] rounded-2xl">
+                            <a href="https://www.sortify.fr" class="" target="_blank">
+                                <img src="./img/dashboard.png" class="min-w-full min-h-full rounded-xl">    
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="contacter" class="lg:mb-96 pt-20 container mx-auto">
-            <div class="title w-full">
-                <h2 class="text-white text-5xl opacity-75 text-center lg:text-left">Me contacter</h2>
+
+        <div id="contacter" class="mb-10 pt-40 container 2xl:pl-[12%]">
+            <div class="title">
+                <h2 class="text-white text-5xl">Me contacter</h2>
             </div>
             <div class="w-full flex justify-center p-20">
-                <h2 class="lg:w-2/3 text-2xl text-purple-400 text-center">
+                <h2 class="lg:w-2/3 w-full text-2xl text-purple-400 text-center">
                     Besoin d'un développeur pour réaliser votre projet ?
                     Envie d'échanger sur un sujet ? Contactez moi !</h2>
             </div>
-            <div class="w-full flex flex-col lg:flex-row lg:justify-center lg:gap-20">
+            <div class="w-full flex flex-col lg:flex-row lg:justify-center gap-4">
                 <div class="xl:hidden flex text-white opacity-75 gap-4 justify-center pb-4">
                     <a href="https://www.linkedin.com/in/simon-bandiera-93451b232/"
-                    class="hover:scale-110 transform transition duration-300 ease-in-out flex gap-2 pr-4"
+                    class="hover:scale-110 transform transition duration-300 ease-in-out flex gap-2"
                     target="_blank">
                         <svg width="24" height="24" viewBox="0 0 24 24">
                             <path fill="#c084fc" d="M12 0c-6.626 0-12 5.373-12 12 0 
@@ -277,7 +382,7 @@
                     </a>
                     <a href="https://github.com/SimonBandiera" 
                         class="hover:scale-110 transform transition duration-300 gap-2 
-                        ease-in-out flex pl-4" target="_blank">
+                        ease-in-out flex" target="_blank">
                         <svg width="24" height="24" viewBox="0 0 24 24">
                             <path fill="#c084fc" d="M12 2c5.514 0 10 4.486 10 10s-4.486 
                             10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 
