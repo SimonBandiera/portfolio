@@ -144,7 +144,7 @@
             </div>
         </div>
 
-        <div id="profil" class="container min-h-screen flex flex-col gap-10 2xl:pl-[15%]">
+        <div id="profil" class="container min-h-screen flex flex-col gap-10 2xl:pl-[15%] opacity-0">
             <div class="title">
                 <h2 class="text-white text-5xl">A propos</h2>
             </div>
@@ -191,7 +191,7 @@
                 </div>
             </div>
         </div>
-        <div id="portfolio" class="container xl:pr-40 flex flex-col min-h-screen mt-20 md:mt-0">
+        <div id="portfolio" class="container xl:pr-40 flex flex-col min-h-screen mt-20 md:mt-0 opacity-0">
             <div class="title 2xl:pl-[15%]">
                 <h2 class="text-white text-5xl">Mes projets</h2>
             </div>
@@ -356,7 +356,7 @@
             </div>
         </div>
 
-        <div id="contacter" class="mb-10 mt-20 container 2xl:pl-[12%]">
+        <div id="contacter" class="mb-10 mt-20 container 2xl:pl-[12%] opacity-0">
             <div class="title">
                 <h2 class="text-white text-5xl">Me contacter</h2>
             </div>
@@ -419,3 +419,21 @@
 
     </body>
 </html>
+
+<script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            // If the element is visible
+            if (entry.isIntersecting) {
+            // Add the animation class
+                var entr = entry.target.classList;
+                entr.add('animation-enter');
+                entr.remove('opacity-0');
+            }
+        });
+    });
+
+    observer.observe(document.getElementById('profil'));
+    observer.observe(document.getElementById('portfolio'));
+    observer.observe(document.getElementById('contacter'));
+</script>
