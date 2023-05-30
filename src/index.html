@@ -275,7 +275,7 @@
 
 
                 <div class="hidden lg:flex flex-col gap-20 2xl:pl-[15%]">
-                    <div class="flex w-full pt-10 h-96 pl-0">
+                    <div class="flex w-full pt-20 h-96 pl-0">
                         <div class="w-full bg-[#6B4F91] rounded-2xl">
                             <a href="https://www.alstom.com/fr/groupe" class="" target="_blank">
                                 <img src="./img/track.png" class="min-w-full min-h-full rounded-xl">
@@ -304,8 +304,8 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="flex w-full pt-10 h-96">
+                    <hr class="w-full"/>
+                    <div class="flex w-full h-96">
                         <div class="w-full text-white py-6 z-10">
                             <h1 class="w-full text-left text-3xl font-semibold">Sortify</h1>
                             <div class="bg-[#2c324b] mt-10 ml-20 -mr-20 text-left rounded-md">
@@ -426,7 +426,7 @@
             // If the element is visible
             if (entry.isIntersecting) {
             // Add the animation class
-                var entr = entry.target.classList;
+                const entr = entry.target.classList;
                 entr.add('animation-enter');
                 entr.remove('opacity-0');
             }
