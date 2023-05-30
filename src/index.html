@@ -25,12 +25,17 @@
                 slide.classList.remove("animated");
                 slide.classList.add("reverse");
             }
-            var prompt = ["Simon.", "un développeur.", "un passioné.", "votre futur collaborateur."]
+            var prompt = ["Simon.", "un développeur.", "un passionné.", "votre futur collaborateur."]
             var state = [toggleAnimation, reverseAnimation]
             var i = 0;
             var j = 0;
             var isAnimated = false;
             setInterval(function() {
+                if (window.innerWidth < 560) {
+                    prompt[3] = "votre futur collabora-teur.";
+                } else {
+                    prompt[3] = "votre futur collaborateur.";
+                }
                 if (!isAnimated) {
                     isAnimated = true;
                     document.getElementById("text").innerHTML = prompt[i];
@@ -126,8 +131,8 @@
                     </h2>
                 </div>
                 <p class="pt-4 text-lg opacity-50 max-w-2xl"> 
-                    Passioné d'informatique, j'aime apprendre et découvrir de nouvelles choses.
-                    Je porte un intéret particulier pour le full-stack, l'intelligence artificielle ainsi que
+                    Passionné d'informatique, j'aime apprendre et découvrir de nouvelles technologies.
+                    Je porte un intérêt particulier pour le full-stack, l'intelligence artificielle ainsi que
                     le design.
                 </p>
                 <a href="#contacter" class="border-2 rounded-lg mr-auto border-purple-400 
@@ -150,11 +155,10 @@
                     </div>
                     <div class="flex flex-col gap-5 my-auto text-lg text-white ">
                         <p class="text-justify"> 
-                            Bonjour ! Je m'appelle Simon et je suis un étudiant à 
+                            Bonjour ! Je m'appelle Simon et je suis étudiant à 
                             <a class="text-purple-400 ">Epitech Lille</a>. 
-                            J'ai développé une passion pour trouver et résoudre de nouveaux challenges.
                             L'informatique est un monde en évolution constante et je suis toujours 
-                            à la découverte de nouvelle technologies.
+                            à la découverte de nouvelles technologies. C'est devenu une véritable passion pour moi !
                         </p>
                         <p class="text-justify">
                             Avec mes compétences, je peux vous aider à donner
@@ -168,7 +172,7 @@
                             <a class="text-purple-400 ">stage</a>
                               de 4 mois de février à juin 2024.
                         </p>
-                        <p class="text-justify">Voici quelque une des technologies que j'ai utilisé dans mes projets récemment:</p>
+                        <p class="text-justify">Voici quelques unes des technologies que j'ai utilisées dans mes projets récents :</p>
                         <div class="flex gap-20">
                             <ul class="list-disc pl-5">
                                 <li>React</li>
@@ -187,7 +191,7 @@
                 </div>
             </div>
         </div>
-        <div id="portfolio" class="min-h-screen container xl:pr-40 flex flex-col min-h-screen mt-20 md:mt-0">
+        <div id="portfolio" class="container xl:pr-40 flex flex-col min-h-screen mt-20 md:mt-0">
             <div class="title 2xl:pl-[15%]">
                 <h2 class="text-white text-5xl">Mes projets</h2>
             </div>
@@ -201,9 +205,9 @@
                             <div class="z-50 w-full px-10 py-10 rounded-xl" style="  background-color: rgb(0,0,0);
                             background-color: rgba(0,0,0, 0.4);">
                                 <p class="text-3xl font-semibol">Flexxtrack</p>
-                                <p class="pt-10"> Réalisation d'une mise a jour sur un outil
-                                    de gestion de maintenance des voies durant 
-                                    mon stage de première année</p>
+                                <p class="pt-10"> Réalisation d'une mise à jour d'un outil
+                                    de gestion de maintenance des voies ferrées durant 
+                                    mon stage de première année.</p>
                                 <p class="pt-10">
                                     Big Data - Mecatronic - Python - Javascript - Matlab
                                 </p>
@@ -229,8 +233,8 @@
                             <div class="z-50 w-full px-10 py-10 rounded-xl" style="  background-color: rgb(0,0,0);
                                 background-color: rgba(0,0,0, 0.4);">
                                 <p class="text-3xl font-semibol">Sortify</p>
-                                <p class="pt-10"> Un site web permetant de, en se connectant à son compte spotify,
-                                    trié les sons par genres d'une certaines playlist.</p>
+                                <p class="pt-10"> Un site web permettant de, en se connectant à son compte spotify,
+                                    trier les sons par genre d'une certaine playlist.</p>
                                 <p class="pt-10">
                                     Python - Flask - Jquery - Tailwind CSS - API Spotify
                                 </p>
@@ -280,9 +284,9 @@
                         <div class="w-full text-white py-6">
                             <h1 class="w-full text-right text-3xl font-semibold">Flexxtrack</h1>
                             <div class="bg-[#2c324b] mt-10 -ml-20 mr-20 text-right rounded-md">
-                                <p class="p-5"> Réalisation d'une mise a jour sur un outil
-                                    de gestion de maintenance des voies durant 
-                                    mon stage de première année</p>
+                                <p class="p-5"> Réalisation d'une mise à jour d'un outil
+                                    de gestion de maintenance des voies ferrées durant 
+                                    mon stage de première année.</p>
                             </div>
                             <p class="pt-16 text-right">
                                 Big Data - Mecatronic - Python - Javascript - Matlab
@@ -305,8 +309,8 @@
                         <div class="w-full text-white py-6 z-10">
                             <h1 class="w-full text-left text-3xl font-semibold">Sortify</h1>
                             <div class="bg-[#2c324b] mt-10 ml-20 -mr-20 text-left rounded-md">
-                                <p class="p-5"> Un site web permetant de, en se connectant à son compte spotify,
-                                    trié les sons par genres d'une certaines playlist.</p>
+                                <p class="p-5"> Un site web permettant de, en se connectant à son compte spotify,
+                                    trier les sons par genre d'une certaine playlist.</p>
                                 </div>
                             <p class="pt-16 text-left">
                                 Python - Flask - Jquery - Tailwind CSS - API Spotify
@@ -358,7 +362,7 @@
             </div>
             <div class="w-full flex justify-center p-20">
                 <h2 class="lg:w-2/3 w-full text-2xl text-purple-400 text-center">
-                    Besoin d'un développeur pour réaliser votre projet ?
+                    Besoin d'un développeur pour réaliser votre projet ?<br>
                     Envie d'échanger sur un sujet ? Contactez moi !</h2>
             </div>
             <div class="w-full flex flex-col lg:flex-row lg:justify-center gap-4">

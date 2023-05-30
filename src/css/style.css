@@ -137,4 +137,17 @@
   ::-webkit-scrollbar-thumb:hover {
     background-color: #C084FC;
   }
+
+    @keyframes wipe-enter {
+        0% {
+            transform: scale(0, .025);
+        }
+        50% {
+            transform: scale(1, .025);
+        }
+    }
+
+    .animation-enter {
+        animation: wipe-enter 1s 1;
+    }
 }
