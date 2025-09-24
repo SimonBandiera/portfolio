@@ -14,6 +14,7 @@ import { contacts } from "./data/contacts";
 
 export default function Home() {
 
+  // @ts-ignore
   return (
       <div className="min-h-screen bg-[#141414] text-white">
         {/* Header */}
@@ -43,7 +44,7 @@ export default function Home() {
           {/* About Section */}
           <div className="mb-8 space-y-4 text-gray-400 leading-relaxed">
             <p>
-              Double diplomé d'<span className="text-white">Epitech</span> et de l'<span className="text-white">Université de Kent</span>, je suis aujourd'hui spécilalisé en développement <span className="text-white">IA</span> et <span className="text-white">bas niveau</span>.
+              Double diplomé d'<span className="text-white">Epitech</span> et de l'<span className="text-white">Université de Kent</span>, je suis aujourd'hui spécialisé en développement <span className="text-white">IA</span> et <span className="text-white">bas niveau</span>.
             </p>
 
             <p>
@@ -51,13 +52,13 @@ export default function Home() {
             </p>
 
             <p>
-              Je suis toujours à la recherche de <span className="text-white">défis</span> à relever, de nouvelles choses à <span className="text-white">apprendre</span>. En ce moment je cherche des <span className="text-white">missions freelances</span> dans le domaine de l'<span className="text-white">IA</span>, aussi bien en <span className="text-white">recherche appliquée</span> qu'en <span className="text-white">développement de solutions concrètes</span>.
+              Je suis toujours à la recherche de <span className="text-white">défis</span> à relever, de nouvelles choses à <span className="text-white">apprendre</span>. En ce moment je cherche des <span className="text-white">missions freelance</span> dans le domaine de l'<span className="text-white">IA</span>, aussi bien en <span className="text-white">recherche appliquée</span> qu'en <span className="text-white">développement de solutions concrètes</span>.
             </p>
           </div>
 
           {/* Availability and CV Section */}
           <div className="flex flex-wrap gap-4 mb-8">
-            <a href="https://www.malt.fr/" target="_blank"
+            <a href="mailto:simon.bandiera@epitech.eu"
                className="flex items-center gap-2 px-3 py-2 bg-[#1F1F1F] border border-[#3B3B3B] rounded-lg hover:border-[#5eb000] transition-colors duration-300">
             <span className="relative flex h-3 w-3">
                 <span

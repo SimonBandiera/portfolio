@@ -25,7 +25,7 @@ export const projects = {
     },
     {
       name: "League of Legend Win Predictor",
-      description: "Benchmark de differents modèles de machine learning pour prédire le gagnant d'une partie de League of Legend. <span style='color: #fff'>80% de précision.</span>",
+      description: "Benchmark de différents modèles de machine learning pour prédire le gagnant d'une partie de League of Legend. <span style='color: #fff'>80% de précision.</span>",
       tech: "AI",
       image: "/lol.png",
       github: "https://github.com/YoungSnoww/LeagueOfLegendsModelBenchmark"
