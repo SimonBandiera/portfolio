@@ -14,7 +14,6 @@ import { contacts } from "./data/contacts";
 
 export default function Home() {
 
-  // @ts-ignore
   return (
       <div className="min-h-screen bg-[#141414] text-white">
         {/* Header */}
